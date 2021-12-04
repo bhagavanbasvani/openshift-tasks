@@ -135,30 +135,26 @@
               </h2>
             </div>
             <div class="card-pf-body">
-              <div class="table-responsive">
-                <table class="datatable table table-striped table-bordered dataTable no-footer">
-                  <tr role="row" class="odd">
-                    <td>Pod Hostname</td>
-                    <td><%= System.getenv("HOSTNAME") %></td>
-                  </tr>
-                  <tr role="row" class="even">
-                    <td>Pod IP</td>
-                    <td><%= System.getenv("MY_POD_IP") %></td>
-                  </tr>
-                  <tr role="row" class="odd">
-                    <td>Used Memory</td>
-                    <% int mb = 1024*1024; %>
-                    <td><%= (Runtime.getRuntime().totalMemory()) / mb %> MB</td>
-                  </tr>
-                  <tr role="row" class="even">
-                    <td>Session ID</td>
-                    <td><%= session.getId() %></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="table-responsive">
+    <table class="datatable table table-striped table-bordered dataTable no-footer">
+      <tr role="row" class="odd">
+        <td>Pod Hostname</td>
+        <td><%= System.getenv("HOSTNAME") %></td>
+      </tr>
+     <!--
+      <tr role="row" class="even">
+        <td>Pod IP</td>
+        <td><%= System.getenv("MY_POD_IP") %></td>
+      </tr>
+      -->
+      <tr role="row" class="odd">
+        <td>Used Memory</td>
+        <% int mb = 1024*1024; %>
+        <td><%= (Runtime.getRuntime().totalMemory()) / mb %> MB</td>
+      </tr>
+      <tr role="row" class="even">
+        <td>Session ID</td>
+        <td><%= session.getId() %></td>
         <div class="col-md-3">
           <div class="card-pf">
             <div class="card-pf-heading">
